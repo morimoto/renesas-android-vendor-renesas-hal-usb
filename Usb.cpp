@@ -505,7 +505,7 @@ error:
 pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
 Usb *usb;
 
-Usb::Usb()
+Usb::Usb() : mPoll(NULL)
 {
     pthread_mutex_lock(&lock);
     // Make this a singleton class
